@@ -1,0 +1,28 @@
+table, th, tr, td {
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+}
+
+.colonne1 {
+    background-color: gray;
+}
+
+.collapse {
+    border-collapse: separate;
+    border-color: red;
+}
+
+.stats {
+    justify-self: center;
+}
+
+header {
+    width: 100%;
+}
+
+header h1 {
+    justify-content: center;
+}
