@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(0, 0, 0);
-    scrollbar-color: rgb(61, 65, 69) rgb(21, 24, 28);
+    background-image: url("../content/fond.png");
+    overflow-x: hidden;
 }
 
 header {
@@ -12,22 +12,95 @@ header {
 
 header .titre {
     text-align: center;
+    font-size: 50px;
+}
+
+.right_container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 15%;
+    top: 30%;
+    align-content: center;
 }
 
 .slogan {
-    position: fixed;
-    right: 20%;
-    top: 10%;
     color: white;
     width: auto;
     font-size: 30px;
 }
 
-.logo {
-    width: 350px;
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 280px;
+    border-radius: 20px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 350px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.age-select {
+    margin-bottom: 30px;
+}
+
+.logo_container {
+    position: absolute;
+    left: 8%;
+    top: 25%;
+}
+
+.my_logo {
+    width: 400px;
     height: auto;
-    position: relative;
-    left: 180px;
 }
 
 footer {
@@ -39,3 +112,115 @@ footer {
     text-align: center;
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    overflow:hidden;
+    width:100%;
+}
+
+.nav{
+    height: 100%;
+    width: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bolder;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    background-color: #E0D3BE;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+
+}
+
+.nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    opacity: 0.8;
+    display: block;
+    transition:.5s ease;
+}
+
+.logo{
+    margin: 25px;
+    opacity: 1px;
+}
+
+.nav a:hover {
+    color: #f1f1f1;
+
+}
+
+.nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor:pointer;
+    color: hsla(0, 30%, 10%);
+}
+
+
+#menu {
+    transition: margin-left .5s ease;
+    padding: 16px;
+    color:#f9f6f2 ;
+    font-size: 30px;
+    cursor:pointer;
+    transition: .5s ease;
+}
+
+#menu :hover{
+    color:hsla(0, 30%, 10%) ;
+}
+
+.bar{
+    position: fixed;
+    top: 0;
+
+}
+
+@media screen and (max-height: 300px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}}

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="../content/logo.png">
     <title>Pwitter</title>
     <link href="../css/Accueil.css" rel="stylesheet"/>
 </head>
@@ -10,23 +11,60 @@
 <body>
     <header>
         <h1 class="titre">Pwitter</h1>
-        <menu>
-            <menuitem><a href="SocialNetwork.html">Social Network</a></menuitem>
-            <menuitem><a href="Phishing.html">Phishing</a></menuitem>
-            <menuitem><a href="Contact.html">Contact</a></menuitem>
-        </menu>
+        <div class="bar">
+            <div id="menu" >
+                <div onclick="openNav()">&#9776; </div>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="nav">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <div><a href="./SocialNetwork.html"> Social Network </a></div>
+            <div><a href="./Phishing.html" target="_blank"> Phishing </a></div>
+            <div><a href="./Contact.html"> Contact </a></div>
+        </div>
     </header>
-    <div>
-        <img src="../content/fond.png">
-        <img src="../content/logo.png" class="logo">
+
+    <div class="logo_container">
+        <img src="../content/logo.png" class="my_logo">
     </div>
-    <div class="slogan">
-        <p class="slogan">C'est bidon.<br>C'est Pweet Pweet.<br>C'est Pwitter.</p>
+
+    <div class="right_container">
+        <div>
+            <h2 class="slogan">Futur slogan</h2>
+        </div>
+
+        <button class="open-button" onclick="openForm()">Inscription</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Sign In</h1>
+
+                <label for="email"><b>Adresse mail:</b></label>
+                <input type="text" pattern=".+@.+\.[a-z]{2,}$" placeholder="Entrez votre adresse mail" name="email" required>
+
+                <label for="psw"><b>Mot de passe:</b></label>
+                <input type="password" placeholder="Entrez votre mot de passe" name="psw" required>
+
+                <label><b>Selectionnez votre tranche d'âge:</b></label>
+                <select name="age" class="age-select">
+                    <option value="plus">Plus de 15 ans</option>
+                    <option value="moins">Moins de 15 ans</option>
+                </select>
+
+                <button type="submit" class="btn">Sign in</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
     </div>
+
     <footer>
         <p><a href="Contact.html">Contact/A propos de nous</a></p>
         <p>© 2021 {nom}. All rights reserved</p>
     </footer>
-</body>
 
+    <script src="../js/Accueil.js"></script>
+
+</body>
 </html>
