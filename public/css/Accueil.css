@@ -1,20 +1,40 @@
+body {
+    background-color: rgb(0, 0, 0);
+    scrollbar-color: rgb(61, 65, 69) rgb(21, 24, 28);
+}
+
 header {
-    background-color: orange;
+    background-color: transparent;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
 }
 
 header .titre {
     text-align: center;
 }
 
+.slogan {
+    position: fixed;
+    right: 20%;
+    top: 10%;
+    color: white;
+    width: auto;
+    font-size: 30px;
+}
+
+.logo {
+    width: 350px;
+    height: auto;
+    position: relative;
+    left: 180px;
+}
+
 footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: green;
+    background-color: transparent;
     width: 100%;
     text-align: center;
 }
