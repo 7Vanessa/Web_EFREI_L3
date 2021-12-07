@@ -37,8 +37,11 @@
         <button class="open-button" onclick="openForm()">Inscription</button>
 
         <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
+            <form class="form-container" name="popup">
                 <h1>Sign In</h1>
+
+                <label><b>Pseudo:</b></label>
+                <input type="text" placeholder="Entrez votre pseudo" name="pseudo" required>
 
                 <label for="email"><b>Adresse mail:</b></label>
                 <input type="text" pattern=".+@.+\.[a-z]{2,}$" placeholder="Entrez votre adresse mail" name="email" required>
@@ -52,8 +55,8 @@
                     <option value="moins">Moins de 15 ans</option>
                 </select>
 
-                <button type="submit" class="btn">Sign in</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <button type="submit" class="btn" onclick="onClickGameplay()">Sign in</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
             </form>
         </div>
 
@@ -61,7 +64,7 @@
 
     <footer>
         <p><a href="Contact.html">Contact/A propos de nous</a></p>
-        <p>© 2021 {nom}. All rights reserved</p>
+        <p>© 2021 Pwitter. All rights reserved</p>
     </footer>
 
     <script src="../js/Accueil.js"></script>

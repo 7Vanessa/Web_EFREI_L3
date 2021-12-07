@@ -44,7 +44,7 @@ header .titre {
 .form-popup {
     display: none;
     position: fixed;
-    top: 20%;
+    top: 10%;
     left: 40%;
     border: 3px solid #f1f1f1;
     z-index: 9;
@@ -57,7 +57,7 @@ header .titre {
 }
 
 .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;

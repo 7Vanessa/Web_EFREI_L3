@@ -1,19 +1,35 @@
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("menu").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "#EED9C4";
+const openNav = () => {
+    document.getElementById("mySidenav").style.width = "250px"
+    document.getElementById("menu").style.marginLeft = "250px"
+    document.body.style.backgroundColor = "#EED9C4"
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("menu").style.marginLeft= "0";
-    document.body.style.backgroundColor = "#EED9C4";
+const closeNav = () => {
+    document.getElementById("mySidenav").style.width = "0"
+    document.getElementById("menu").style.marginLeft= "0"
+    document.body.style.backgroundColor = "#EED9C4"
 }
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+const openForm = () => {
+    document.getElementById("myForm").style.display = "block"
 }
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+const closeForm = () => {
+    document.getElementById("myForm").style.display = "none"
 }
+
+var formulaire = document.forms.popup
+
+const onClickGameplay = () => {
+    alert("ca marche")
+    if(formulaire.age.value == "plus")
+        window.location.pathname = "../pages/Phishing.html"
+    else
+        window.location.pathname = "../pages/SocialNetwork.html"
+}
+
+const addInTab = () => {
+    var pseudo = formulaire.pseudo.value.
+    var age = formulaire.age.value
+}
+

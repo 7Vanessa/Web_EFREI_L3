@@ -13,14 +13,14 @@
         <h1>Site web</h1>
     </header>
     <div class="stats">
-        <table>
+       <!-- <table>
 
             <colgroup>
                 <col class="colonne1">
             </colgroup>
 
             <tr>
-                <th>Statistiques</th>
+                <th>Personnage</th>
                 <th>Oui</th>
                 <th>Non</th>
             </tr>
@@ -49,12 +49,54 @@
                 <td>60%</td>
             </tr>
 
+        </table> -->
+
+        <table class="table" id="tableStats">
+            <thead>
+            <tr>
+                <th>Pseudo</th>
+                <th>Age</th>
+            </tr>
+            </thead>
+            <tr></tr>
         </table>
+
     </div>
 
     <div>
         <p>Réalisé par : Vanessa MOHAMMEDI et Kévin HUY<br>Etudiants en 3ème année à Efrei Paris<br>Projet réalisé dans le cadre de l'UE de programmation Web</p>
     </div>
+
+    <script src="../js/Accueil.js"></script>
+    <script id="stats" type="text/x-jquery-tmpl">
+            <tr>
+                <th>${Pseudo}</th>
+                <th>${Age}</th>
+            </tr>
+    </script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#click').click(function (e) {
+                var model = new Object();
+
+                // $('#id').val()
+                model.Pseudo = "";
+                model.Age = ""
+
+                $("#stats").tmpl(model).appendTo("#tableStats");
+            });
+        });
+    </script>
+    </div>
+
+    <div>
+        <p>Réalisé par : Vanessa MOHAMMEDI et Kévin HUY<br>Etudiants en 3ème année à Efrei Paris<br>Projet réalisé dans le cadre de l'UE de programmation Web</p>
+    </div>
+
+    <script src="../js/Accueil.js"></script>
+
 </body>
 
 </html>
