@@ -1,10 +1,10 @@
 body {
-    background-image: url("../content/fond.png");
+    background-color: white;
     overflow-x: hidden;
 }
 
 header {
-    background-color: transparent;
+    background-color: dodgerblue;
     width: 100%;
     top: 0px;
     left: 0px;

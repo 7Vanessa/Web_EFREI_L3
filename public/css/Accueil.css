@@ -1,13 +1,14 @@
 body {
-    background-image: url("../content/fond.png");
+    background-color: white;
     overflow-x: hidden;
 }
 
 header {
-    background-color: transparent;
+    background-color: dodgerblue;
     width: 100%;
     top: 0px;
     left: 0px;
+    position: absolute;
 }
 
 header .titre {
@@ -107,7 +108,7 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: transparent;
+    background-color: dodgerblue;
     width: 100%;
     text-align: center;
 }
@@ -223,4 +224,4 @@ footer {
 @media screen and (max-height: 300px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-}}
+}

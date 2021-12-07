@@ -21,15 +21,13 @@ const closeForm = () => {
 var formulaire = document.forms.popup
 
 const onClickGameplay = () => {
-    alert("ca marche")
     if(formulaire.age.value == "plus")
-        window.location.pathname = "../pages/Phishing.html"
+        window.location.href = "../pages/Phishing.html"
     else
-        window.location.pathname = "../pages/SocialNetwork.html"
+        window.location.href = "../pages/SocialNetwork.html"
 }
 
 const addInTab = () => {
-    var pseudo = formulaire.pseudo.value.
+    var pseudo = formulaire.pseudo.value
     var age = formulaire.age.value
 }
-
