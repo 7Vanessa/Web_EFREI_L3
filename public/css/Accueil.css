@@ -6,8 +6,8 @@ body {
 header {
     background-color: dodgerblue;
     width: 100%;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     position: absolute;
 }
 
@@ -31,6 +31,7 @@ header .titre {
     font-size: 30px;
 }
 
+
 .open-button {
     background-color: #555;
     color: white;
@@ -41,7 +42,6 @@ header .titre {
     width: 280px;
     border-radius: 20px;
 }
-
 .form-popup {
     display: none;
     position: fixed;
@@ -183,7 +183,7 @@ footer {
 
 .logo{
     margin: 25px;
-    opacity: 1px;
+    opacity: 1;
 }
 
 .nav a:hover {
@@ -208,7 +208,6 @@ footer {
     color:#f9f6f2 ;
     font-size: 30px;
     cursor:pointer;
-    transition: .5s ease;
 }
 
 #menu :hover{

@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="../content/logo.png">
-    <title>Vous avez gagné !!!</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../content/confettis.png">
+    <title>Iphone 12 pro max à 5 euros seulement ! </title>
+    <link href="../css/Phishing.css" rel="stylesheet"/>
 </head>
+
 <body>
+<header>
+    <h1 class="main-title"><b>VOUS AVEZ GAGNÉ UN IPHONE 12 PRO MAX !!!</b></h1>
+</header>
+
+<div class="sub-title">
+    <h1 class="title1">Vous avez été sélectionné au hasard parmis 200 000 candidats pour remporter un Iphone 12 Pro Max !</h1>
+    <h2 class="title2">Pour recevoir votre lot, veuillez rentrer vos cordonnées : </h2>
+</div>
+
+<div style="display: flex;align-items: center">
+    <div class="div-form">
+        <form class="form">
+            <strong class="input-title">NOM</strong>
+            <br>
+            <label>
+                <input type="text" name="nom" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">PRÉNOM</strong>
+            <br>
+            <label>
+                <input type="text" name="prenom" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">Âge</strong>
+            <br>
+            <label>
+                <input type="number" name="prenom" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">ADRESSE</strong>
+            <br>
+            <label>
+                <input type="text" name="address" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">CODE POSTAL</strong>
+            <br>
+            <label>
+                <input type="text" name="zip-code" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">TÉLÉPHONE</strong>
+            <br>
+            <label>
+                <input type="tel" name="phone-number" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">RIB</strong>
+            <br>
+            <label>
+                <input type="text" name="RIB" size="40" class="input">
+            </label>
+            <br>
+            <br>
+            <strong class="input-title">CRYPTOGRAMME VISUEL</strong>
+            <br>
+            <label>
+                <input type="password" name="cryptogramme" size="40" class="input">
+            </label>
+        </form>
+    </div>
+<button type="submit" class="button" onclick="onClickPhishing()">RECEVOIR VOTRE LOT</button>
+</div>
+
+<br>
+
+<div class="comment-section">
+    <h2 style="font-family: Arial, serif">Commentaires</h2>
+    <h3 style="font-family: 'Times New Roman', serif">Mr. Guantanamo</h3>
+    <div class="comment">
+        <img src="../content/personne.jpeg" class="img-profile" alt="photo de profil d'un usager ayant déposer un commentaire">
+        <h3 style="font-family: 'Arial', serif">Très satisfait du produit ! Merci de m'avoir sélectionné pour le concours. SHEESH</h3>
+    </div>
+    <br>
+    <button style="cursor: pointer" type="submit" onclick="onClickPhishing()">Entrez un commentaire</button>
+</div>
 
 </body>
+
+<script src="../js/phishing.js">
+
+</script>
 </html>
 

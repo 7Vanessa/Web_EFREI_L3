@@ -21,7 +21,7 @@ const closeForm = () => {
 var formulaire = document.forms.popup
 
 const onClickGameplay = () => {
-    if(formulaire.age.value == "plus")
+    if(formulaire.age.value === "plus")
         window.location.href = "../pages/Phishing.html"
     else
         window.location.href = "../pages/SocialNetwork.html"

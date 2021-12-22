@@ -1,0 +1,92 @@
+.main-title {
+    text-align: center;
+    color: firebrick;
+    font-family: Calibri, serif;
+    font-weight: bold;
+}
+
+.sub-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+    font-family: Calibri, serif;
+    box-shadow: 0 0 40px yellow;
+}
+
+.title2 {
+    text-align: center;
+    font-family: Calibri, serif;
+}
+
+header {
+    background-image: url("../content/confettis.png");
+}
+
+.form {
+    border: solid;
+    border-width: 3px;
+    border-color: black;
+    height: 70%;
+    width: auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.div-form {
+    display: flex;
+    justify-content: center;
+    margin-left: 450px;
+}
+
+.input-title {
+    font-family: Calibri, serif;
+}
+
+.input {
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.button {
+    margin-left: 100px;
+    size: 150px;
+    width: 20%;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 2px 2px grey;
+    font-family: "Arial Black", serif;
+    font-size: 150%;
+    cursor: pointer;
+    background-image: url("../content/confettis.png");
+}
+
+.img-profile {
+    height: 5%;
+    width: 5%;
+    margin-right: 10px;
+}
+
+.comment-section {
+    border: solid;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+}
