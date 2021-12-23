@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="../content/logo.png">
+    <link rel="stylesheet" href="../css/LogoPwitter.css">
     <title>Pwitter</title>
 </head>
 <body>
@@ -13,28 +13,385 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="../content/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/pigeon.ico">
     <title>Pwitter</title>
+
     <link href="../css/SocialNetwork.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-<header>
-    <h1 class="titre">Pwitter</h1>
-</header>
 
-<div class="middle_container">
+    <div class="layout">
+        <div class="layout_left-sidebar">
+            <img src="../assets/pigeon.ico" class="LogoPwitter">
+            <div class="sidebar-menu">
+                <div class="sidebar-menu_item sidebar-menu_item--active" onclick="renderHomeContent()">
+                    <img src="../assets/svg/home.svg" class="sidebar-menu_item-icon">
+                    Home
+                </div>
+                <div class="sidebar-menu_item" onclick="renderExploreContent()">
+                    <img src="../assets/svg/explore.svg" class="sidebar-menu_item-icon">
+                    Explore
+                </div>
+                <div class="sidebar-menu_item" onclick="renderNotificationsContent()">
+                    <img src="../assets/svg/notifications.svg" class="sidebar-menu_item-icon">
+                    Notifications
+                </div>
+                <div class="sidebar-menu_item" onclick="renderMessagesContent()">
+                    <img src="../assets/svg/messages.svg" class="sidebar-menu_item-icon">
+                    Messages
+                </div>
+                <div class="sidebar-menu_item" onclick="renderProfileContent()">
+                    <img src="../assets/svg/profile.svg" class="sidebar-menu_item-icon">
+                    Profile
+                </div>
+            </div>
+        </div>
 
-</div>
+        <div class="layout_main_home" id="home">
+            <div class="layout_main_home-heading">
+                Heading
+            </div>
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            Camille Dubois
+                        </div>
+                        <div class="pweet_author-at">
+                            @camilledubois
+                        </div>
+                        <div class="pweet_publish-time">
+                            1h
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        Voici un livre très intéressant sur la programmation Web avec HTML et CSS.<br>
+                        <a target="_blank" href="https://www.amazon.fr/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_6?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=html+css&qid=1640191650&sr=8-6">Lien vers le livre</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/man1.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            John Doe
+                        </div>
+                        <div class="pweet_author-at">
+                            @johndoe
+                        </div>
+                        <div class="pweet_publish-time">
+                            13h
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        Toutes mes félicitations à Camille Dubois pour son nouveau poste de développeur Web.
+                    </div>
+                </div>
+            </div>
 
-</div>
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            Camille Dubois
+                        </div>
+                        <div class="pweet_author-at">
+                            @camilledubois
+                        </div>
+                        <div class="pweet_publish-time">
+                            20h
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        Heureuse d'avoir rejoint Pwitter en tant que développeur Web.
+                    </div>
+                </div>
+            </div>
+            <div class="pweet_pub">
+                <a href="Phishing.html">
+                    Publicité
+                    <div class="pweet_pub-content">
+                        <img class="pweet_pub-image" src="../assets/Pweet/iphone12.jpg">
+                        <div class="pweet_pub-message">
+                            Tentez votre chance !!<br>
+                            IPhone 12 pro max à gagner !!!
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-<footer>
-    <p><a href="Contact.html">Contact/A propos de nous</a></p>
-    <p>© 2021 {nom}. All rights reserved</p>
-</footer>
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/man2.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            Mark Blake
+                        </div>
+                        <div class="pweet_author-at">
+                            @markblake
+                        </div>
+                        <div class="pweet_publish-time">
+                            1d
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        Un cours indispensable pour débuter en JavaScript. Merci à toi John Doe pour ce contenu très intéressant.
+                    </div>
+                </div>
+            </div>
 
-<script src="../js/Accueil.js"></script>
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/man1.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            John Doe
+                        </div>
+                        <div class="pweet_author-at">
+                            @johndoe
+                        </div>
+                        <div class="pweet_publish-time">
+                            2d
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        Pensez à consulter mon nouveau cours sur les bases de JavaScript.
+                    </div>
+                </div>
+            </div>
+
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/man2.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            Mark Blake
+                        </div>
+                        <div class="pweet_author-at">
+                            @markblake
+                        </div>
+                        <div class="pweet_publish-time">
+                            3d
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        Souvenir de mon dernier voyage au Japon.<br>
+                        <img class="pweet_image" src="../assets/Pweet/japon.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pweet">
+                <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
+                <div class="pweet_main">
+                    <div class="pweet_header">
+                        <div class="pweet_author-name">
+                            Camille Dubois
+                        </div>
+                        <div class="pweet_author-at">
+                            @camilledubois
+                        </div>
+                        <div class="pweet_publish-time">
+                            5d
+                        </div>
+                    </div>
+                    <div class="pweet_content">
+                        C'est avec joie que je m'installe à New York pour exercer pour la première fois en tant que développeur Web.<br>
+                        <img class="pweet_image" src="../assets/Pweet/NewYork.jpg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layout_main_explore" id="explore">
+            Explore
+        </div>
+
+        <div class="layout_main_notifications" id="notifications">
+            <div class="notification_heading">
+                Notifications
+            </div>
+
+            <div class="notification">
+                <div class="notification_logos">
+                    <img class="notification_logo" src="../assets/ProfilePicture/woman1.png">
+                    <img class="notification_logo" src="../assets/ProfilePicture/man1.png">
+                    <img class="notification_logo" src="../assets/ProfilePicture/man2.png">
+                </div>
+                <div class="notification_info">
+                    Il y a eu beaucoup de Pweets en votre absence
+                </div>
+                <div class="notification_content">
+                    Allez vite les consulter
+                </div>
+            </div>
+
+            <div class="notification">
+                <img class="notification_logo" src="../assets/ProfilePicture/woman1.png">
+                <div class="notification_info">
+                    Pweet récent de Camille Dubois
+                </div>
+                <div class="notification_content">
+                    Heureuse d'avoir rejoint Pwitter en tant que développeur Web.
+                </div>
+            </div>
+
+            <div class="notification">
+                <img class="notification_logo" src="../assets/ProfilePicture/man2.png">
+                <div class="notification_info">
+                    Pweet récent de Mark Blake
+                </div>
+                <div class="notification_content">
+                    Souvenir de mon dernier voyage au Japon.
+                </div>
+            </div>
+
+            <div class="notification">
+                <img class="notification_logo" src="../assets/ProfilePicture/woman1.png">
+                <div class="notification_info">
+                    Pweet récent de Camille Dubois
+                </div>
+                <div class="notification_content">
+                    C'est avec joie que je m'installe à New York pour exercer pour la première fois en tant que développeur Web.
+                </div>
+            </div>
+        </div>
+
+        <div class="layout_main_messages" id="messages">
+            Messages
+        </div>
+
+        <div class="layout_main_profile" id="profile">
+            Profile
+        </div>
+
+        <div class="layout_right-sidebar-container">
+            <div class="layout_right-sidebar">
+                <div class="trends">
+                    <div class="trends_block">
+                        <div class="trends_heading">
+                            Tendances
+                        </div>
+                    </div>
+
+                    <div class="trends_block">
+                        <div class="trends_infos">
+                            Tendances en France
+                        </div>
+                        <div class="trends_name">
+                            #EfreiParis
+                        </div>
+                        <div class="trends_infos">
+                            2k Pweets
+                        </div>
+                    </div>
+
+                    <div class="trends_block">
+                        <div class="trends_infos">
+                            Tendances en France
+                        </div>
+                        <div class="trends_name">
+                            #Elections2022
+                        </div>
+                        <div class="trends_infos">
+                            600k Pweets
+                        </div>
+                    </div>
+
+                    <div class="trends_block">
+                        <div class="trends_infos">
+                            Tendances en France
+                        </div>
+                        <div class="trends_name">
+                            #CyberPunk2077
+                        </div>
+                        <div class="trends_infos">
+                            150k Pweets
+                        </div>
+                    </div>
+
+                    <div class="trends_block">
+                        <div class="trends_infos">
+                            Tendances en France
+                        </div>
+                        <div class="trends_name">
+                            #Covid19
+                        </div>
+                        <div class="trends_infos">
+                            350k Pweets
+                        </div>
+                    </div>
+                </div>
+                <div class="follow">
+                    <div class="follow_block">
+                        <div class="follow_heading">
+                            Personnes à suivre
+                        </div>
+                    </div>
+                    <div class="follow_block">
+                        <img class="follow_author-logo" src="../assets/ProfilePicture/netflix.jpg">
+                        <div class="follow_content">
+                            <div>
+                                <div class="follow_author-name">
+                                    Netflix France
+                                </div>
+                                <div class="follow_author-tag">
+                                    @NetflixFR
+                                </div>
+                            </div>
+                            <div class="follow_button">
+                                + Suivre
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="follow_block">
+                        <img class="follow_author-logo" src="../assets/ProfilePicture/disney.jpg">
+                        <div class="follow_content">
+                            <div>
+                                <div class="follow_author-name">
+                                    Disney +
+                                </div>
+                                <div class="follow_author-tag">
+                                    @Disney+
+                                </div>
+                            </div>
+                            <div class="follow_button">
+                                + Suivre
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="follow_block">
+                        <img class="follow_author-logo" src="../assets/ProfilePicture/spotify.png">
+                        <div class="follow_content">
+                            <div>
+                                <div class="follow_author-name">
+                                    Spotify France
+                                </div>
+                                <div class="follow_author-tag">
+                                    @SpotifyFR
+                                </div>
+                            </div>
+                            <div class="follow_button">
+                                + Suivre
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../js/SocialNetwork.js"></script>
 
 </body>
 </html>
