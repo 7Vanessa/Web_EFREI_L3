@@ -35,19 +35,3 @@ const addInTab = () => {
 const phishing = () => {
     window.location.href = "../pages/Phishing.html"
 }
-
-function darkDiv(div){
-    div.style.backgroundColor = "#DDDDDD";
-    const id_img = document.getElementById("img_iphone");
-    const text_phishing = document.getElementById("text_phishing");
-    id_img.style.opacity = "0.3";
-    text_phishing.style.opacity = "0.3";
-}
-
-function normalDiv(div) {
-    div.style.backgroundColor = "#FFFFFF"
-    const id_img = document.getElementById("img_iphone");
-    const text_phishing = document.getElementById("text_phishing");
-    id_img.style.opacity = "1";
-    text_phishing.style.opacity = "1";
-}
