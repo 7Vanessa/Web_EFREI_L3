@@ -78,10 +78,11 @@
     display: flex;
     flex-direction: column;
     padding-left: 50px;
-    border-bottom: #E6ECF0;
+    border-bottom: 1px solid #E6ECF0;
     font-size: 15px;
     color: #0F141A;
     justify-content: center;
+    padding-bottom: 5px;
 }
 
 .pweet_pub-message {
@@ -290,11 +291,19 @@
     border-radius: 25px;
     padding: 5px;
     text-align: center;
-    justify-content: center;
+    justify-items: center;
     min-width: 68px;
 }
 
 .follow_button:hover {
     cursor: pointer;
     background: rgba(29, 161, 242, 0.1);
+}
+
+.follow_button_on {
+    margin: auto;
+}
+
+.follow_button_off {
+    margin: auto;
 }

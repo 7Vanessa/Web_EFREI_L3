@@ -28,24 +28,24 @@
         <div class="layout_left-sidebar">
             <img src="../assets/pigeon.ico" class="LogoPwitter">
             <div class="sidebar-menu">
-                <div class="sidebar-menu_item sidebar-menu_item--active" onclick="renderHomeContent()">
-                    <img src="../assets/svg/home.svg" class="sidebar-menu_item-icon">
+                <div class="sidebar-menu_item sidebar-menu_item--active" id="sidebar-home" onclick="renderHomeContent()">
+                    <img src="../assets/svg/home.svg" class="sidebar-menu_item-icon" id="sidebar-home_img">
                     Home
                 </div>
-                <div class="sidebar-menu_item" onclick="renderExploreContent()">
-                    <img src="../assets/svg/explore.svg" class="sidebar-menu_item-icon">
+                <div class="sidebar-menu_item" id="sidebar-explore" onclick="renderExploreContent()">
+                    <img src="../assets/svg/explore.svg" class="sidebar-menu_item-icon" id="sidebar-explore_img">
                     Explore
                 </div>
-                <div class="sidebar-menu_item" onclick="renderNotificationsContent()">
-                    <img src="../assets/svg/notifications.svg" class="sidebar-menu_item-icon">
+                <div class="sidebar-menu_item" id="sidebar-notif" onclick="renderNotificationsContent()">
+                    <img src="../assets/svg/notifications.svg" class="sidebar-menu_item-icon" id="sidebar-notif_img">
                     Notifications
                 </div>
-                <div class="sidebar-menu_item" onclick="renderMessagesContent()">
-                    <img src="../assets/svg/messages.svg" class="sidebar-menu_item-icon">
+                <div class="sidebar-menu_item" id="sidebar-message" onclick="renderMessagesContent()">
+                    <img src="../assets/svg/messages.svg" class="sidebar-menu_item-icon" id="sidebar-message_img">
                     Messages
                 </div>
-                <div class="sidebar-menu_item" onclick="renderProfileContent()">
-                    <img src="../assets/svg/profile.svg" class="sidebar-menu_item-icon">
+                <div class="sidebar-menu_item" id="sidebar-profile" onclick="renderProfileContent()">
+                    <img src="../assets/svg/profile.svg" class="sidebar-menu_item-icon" id="sidebar-profile_img">
                     Profile
                 </div>
             </div>
@@ -347,8 +347,9 @@
                                     @NetflixFR
                                 </div>
                             </div>
-                            <div class="follow_button">
-                                + Suivre
+                            <div class="follow_button" onclick="follow()">
+                                <div class="follow_button_off" id="follow_state_off">+ Suivre</div>
+                                <img class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on">
                             </div>
                         </div>
                     </div>
@@ -364,8 +365,9 @@
                                     @Disney+
                                 </div>
                             </div>
-                            <div class="follow_button">
-                                + Suivre
+                            <div class="follow_button" onclick="follow2()">
+                                <div class="follow_button_off" id="follow_state_off2">+ Suivre</div>
+                                <img class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on2">
                             </div>
                         </div>
                     </div>
@@ -381,8 +383,9 @@
                                     @SpotifyFR
                                 </div>
                             </div>
-                            <div class="follow_button">
-                                + Suivre
+                            <div class="follow_button" onclick="follow3()">
+                                <div class="follow_button_off" id="follow_state_off3">+ Suivre</div>
+                                <img class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on3">
                             </div>
                         </div>
                     </div>
