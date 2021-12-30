@@ -53,7 +53,8 @@
 
         <div class="layout_main_home" id="home">
             <div class="layout_main_home-heading">
-                Heading
+                <img src="../assets/ProfilePicture/MyProfilePicture.png" class="my_profile_picture">
+                <div id="my_name"></div>
             </div>
             <div class="pweet">
                 <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
@@ -266,7 +267,28 @@
         </div>
 
         <div class="layout_main_messages" id="messages">
-            Messages
+
+            <div class="top_nav_chat">
+                <div class="conversation_person_picture">
+                    <img class="conversation_person_picture" src="../assets/ProfilePicture/unknown.png">
+                </div>
+                <div class="conversation_person">Unknown</div>
+                <div class="conversation_call">
+                    <img class="phone_call" src="../assets/svg/phone.svg">
+                    <img class="video_call" src="../assets/svg/video-camera.svg">
+                </div>
+            </div>
+
+            <div class="messages_area" id="messages_area">
+                <div class="unknown_message">Salut</div>
+                <div class="unknown_message">Tu te demandes peut-être qui je suis ?</div>
+            </div>
+
+            <div class="bottom_nav_chat">
+                <input class="input_message_conversation" id="input_message_conversation" type="text" placeholder="Tapez votre message...">
+                <img class="bottom_nav_chat_send" src="../assets/svg/send.svg" onclick="chatWith()">
+            </div>
+
         </div>
 
         <div class="layout_main_profile" id="profile">

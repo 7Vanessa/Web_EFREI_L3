@@ -1,3 +1,26 @@
+const getPseudo = () => {
+    return pseudo
+}
+
+const chatWith = () => {
+    const message = document.getElementById("input_message_conversation").value
+    var div = document.createElement('div');
+    div.id = 'container';
+    div.innerHTML = message;
+    div.className = 'my_message';
+
+    document.getElementById("messages_area").appendChild(div);
+
+    document.getElementById("input_message_conversation")
+}
+
+
+const onSignUp = () => {
+    const pseudo = document.forms.sign_up_form.pseudo.value.toString()
+    window.location.href = "../pages/SocialNetwork.html"
+    document.getElementById("my_name").innerHTML = pseudo
+}
+
 const onLoadRender = () => {
     document.getElementById("explore").style.display = "none"
     document.getElementById("notifications").style.display = "none"
@@ -6,7 +29,7 @@ const onLoadRender = () => {
     document.getElementById("home").style.display = "block"
 }
 
-onLoadRender()
+window.onload = onLoadRender()
 
 const renderFollowState = () => {
     document.getElementById("follow_state_on").style.display = "none"
@@ -192,4 +215,13 @@ const follow3 = () => {
         document.getElementById("follow_state_on3").style.display = "none"
         document.getElementById("follow_state_off3").style.display = "block"
     }
+}
+
+const startTime = () => {
+    var date = new Date()
+    document.getElementById('timer').innerHTML = ' ' + date.getHours() + ' : ' + date.getMinutes() + ' : ' + date.getSeconds()
+}
+
+const onClickProfile = () => {
+    setInterval("startTime()", 100)
 }

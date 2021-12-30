@@ -1,10 +1,16 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: sans-serif;
-    background-image: url("../assets/Home/fond.jpg");
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    display: flex;
+}
+
+.my_video {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.7;
+    position: fixed;
 }
 
 .form_sign-up {
@@ -12,9 +18,13 @@ body {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     background: #fff;
     padding: 20px;
-    margin: 8% auto 0;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     border-radius: 15px;
+    z-index: 9;
+    position: absolute;
+    margin-top: 190px;
 }
 
 .form_sign-up h1 {
@@ -54,6 +64,7 @@ footer {
     background-color: transparent;
     width: 100%;
     text-align: center;
+    z-index: 9;
 }
 
 footer a {
