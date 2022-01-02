@@ -29,6 +29,7 @@ const onLoadRender = () => {
     document.getElementById("home").style.display = "block"
 }
 
+window.onload = itsMe()
 window.onload = onLoadRender()
 
 const renderFollowState = () => {
@@ -224,4 +225,11 @@ const startTime = () => {
 
 const onClickProfile = () => {
     setInterval("startTime()", 100)
+}
+
+function itsMe() {
+    const name = document.querySelector('.my_name')
+    const parameters = location.search.substring(1).split("&")
+    let value = parameters[0].split("=")
+    name.textContent = unescape(value[1])
 }
