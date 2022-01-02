@@ -55,12 +55,6 @@ button {
 
 .sign-up_button {
     background-color: #1C8ADB;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    width: 90%;
-    border: 1px solid #999;
-    outline: none;
 }
 
 footer {
@@ -71,8 +65,13 @@ footer {
     width: 100%;
     text-align: center;
     z-index: 9;
+    font-weight: bold;
 }
 
 footer a {
     text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
 }

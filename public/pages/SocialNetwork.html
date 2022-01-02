@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/SocialNetwork.css">
-    <title>Pwitter</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -22,42 +12,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body onload="itsMe()">
+<body>
 
     <div class="layout">
         <div class="layout_left-sidebar">
-            <img src="../assets/pigeon.ico" class="LogoPwitter">
+            <img alt="Logo Pwitter" src="../assets/pigeon.ico" class="LogoPwitter">
             <div class="sidebar-menu">
                 <div class="sidebar-menu_item sidebar-menu_item--active" id="sidebar-home" onclick="renderHomeContent()">
-                    <img src="../assets/svg/home.svg" class="sidebar-menu_item-icon" id="sidebar-home_img">
+                    <img alt="Logo Home" src="../assets/svg/home.svg" class="sidebar-menu_item-icon" id="sidebar-home_img">
                     Home
                 </div>
                 <div class="sidebar-menu_item" id="sidebar-explore" onclick="renderExploreContent()">
-                    <img src="../assets/svg/explore.svg" class="sidebar-menu_item-icon" id="sidebar-explore_img">
-                    Explore
+                    <img alt="Logo Explore" src="../assets/svg/explore.svg" class="sidebar-menu_item-icon" id="sidebar-explore_img">
+                    Découvre
                 </div>
                 <div class="sidebar-menu_item" id="sidebar-notif" onclick="renderNotificationsContent()">
-                    <img src="../assets/svg/notifications.svg" class="sidebar-menu_item-icon" id="sidebar-notif_img">
+                    <img alt="Logo Notif" src="../assets/svg/notifications.svg" class="sidebar-menu_item-icon" id="sidebar-notif_img">
                     Notifications
                 </div>
                 <div class="sidebar-menu_item" id="sidebar-message" onclick="renderMessagesContent()">
-                    <img src="../assets/svg/messages.svg" class="sidebar-menu_item-icon" id="sidebar-message_img">
+                    <img alt="Logo Message" src="../assets/svg/messages.svg" class="sidebar-menu_item-icon" id="sidebar-message_img">
                     Messages
                 </div>
                 <div class="sidebar-menu_item" id="sidebar-profile" onclick="renderProfileContent()">
-                    <img src="../assets/svg/profile.svg" class="sidebar-menu_item-icon" id="sidebar-profile_img">
-                    Profile
+                    <img alt="Logo Profil" src="../assets/svg/profile.svg" class="sidebar-menu_item-icon" id="sidebar-profile_img">
+                    Profil
+                </div>
+                <div class="sidebar-menu_item" id="sidebar-deconnexion" onclick="logOut()">
+                    <img alt="Logo Deconnexion" src="../assets/svg/power.svg" class="sidebar-menu_item-icon" id="sidebar-deconnexion_img">
+                    Déconnexion
                 </div>
             </div>
         </div>
 
         <div class="layout_main_home" id="home">
             <div class="layout_main_home-heading">
-                <img src="../assets/ProfilePicture/MyProfilePicture.png" class="my_profile_picture">
-                <div class="my_name"></div>
+                <img alt="Photo de profil" src="../assets/ProfilePicture/MyProfilePicture.png" class="my_profile_picture">
+                <div class="home_heading_content">
+                    <div class="home_heading_info">
+                        <div class="pweet_author-name" id="my_name"></div>
+                        <div class="pweet_author-at" id="my_at"></div>
+                    </div>
+                    <input class="input_pweet" id="input_pweet"
+                           type="text" placeholder="Tapez votre pweet...">
+                </div>
+                <button class="pweet_button" onclick="pwitter()">Pweeter</button>
             </div>
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -77,7 +79,7 @@
                 </div>
             </div>
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/man1.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/man1.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -97,7 +99,7 @@
             </div>
 
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -119,7 +121,7 @@
                 <a href="Phishing.html">
                     Publicité
                     <div class="pweet_pub-content">
-                        <img class="pweet_pub-image" src="../assets/Pweet/iphone12.jpg">
+                        <img alt="Image Iphone 12" class="pweet_pub-image" src="../assets/Pweet/iphone12.jpg">
                         <div class="pweet_pub-message">
                             Tentez votre chance !!<br>
                             IPhone 12 pro max à gagner !!!
@@ -129,7 +131,7 @@
             </div>
 
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/man2.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/man2.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -139,7 +141,7 @@
                             @markblake
                         </div>
                         <div class="pweet_publish-time">
-                            1d
+                            1j
                         </div>
                     </div>
                     <div class="pweet_content">
@@ -149,7 +151,7 @@
             </div>
 
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/man1.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/man1.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -159,7 +161,7 @@
                             @johndoe
                         </div>
                         <div class="pweet_publish-time">
-                            2d
+                            2j
                         </div>
                     </div>
                     <div class="pweet_content">
@@ -169,7 +171,7 @@
             </div>
 
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/man2.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/man2.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -179,18 +181,18 @@
                             @markblake
                         </div>
                         <div class="pweet_publish-time">
-                            3d
+                            3j
                         </div>
                     </div>
                     <div class="pweet_content">
                         Souvenir de mon dernier voyage au Japon.<br>
-                        <img class="pweet_image" src="../assets/Pweet/japon.jpg">
+                        <img alt="Photo Japon" class="pweet_image" src="../assets/Pweet/japon.jpg">
                     </div>
                 </div>
             </div>
 
             <div class="pweet">
-                <img class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
+                <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/woman1.png">
                 <div class="pweet_main">
                     <div class="pweet_header">
                         <div class="pweet_author-name">
@@ -200,12 +202,12 @@
                             @camilledubois
                         </div>
                         <div class="pweet_publish-time">
-                            5d
+                            5j
                         </div>
                     </div>
                     <div class="pweet_content">
                         C'est avec joie que je m'installe à New York pour exercer pour la première fois en tant que développeur Web.<br>
-                        <img class="pweet_image" src="../assets/Pweet/NewYork.jpg">
+                        <img alt="Photo New York" class="pweet_image" src="../assets/Pweet/NewYork.jpg">
                     </div>
                 </div>
             </div>
@@ -213,7 +215,93 @@
         </div>
 
         <div class="layout_main_explore" id="explore">
-            Explore
+            <div class="explore_heading">
+                Découvre
+            </div>
+            <div class="layout_explore">
+                <div class="pweet">
+                    <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/pathe.png">
+                    <div class="pweet_main">
+                        <div class="pweet_header">
+                            <div class="pweet_author-name">
+                                Pathé
+                            </div>
+                            <div class="pweet_author-at">
+                                @pathé
+                            </div>
+                            <div class="pweet_publish-time">
+                                5j
+                            </div>
+                        </div>
+                        <div class="pweet_content">
+                            Dernière sortie<br>
+                            <iframe id="spider" width="500" height="300" src="https://www.youtube.com/embed/7w_w10HVa54" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pweet">
+                    <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/netflix.jpg">
+                    <div class="pweet_main">
+                        <div class="pweet_header">
+                            <div class="pweet_author-name">
+                                Netflix France
+                            </div>
+                            <div class="pweet_author-at">
+                                @NetflixFR
+                            </div>
+                            <div class="pweet_publish-time">
+                                10j
+                            </div>
+                        </div>
+                        <div class="pweet_content">
+                            On regarde quoi pour bien commencer l'année ?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pweet">
+                    <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/netflix.jpg">
+                    <div class="pweet_main">
+                        <div class="pweet_header">
+                            <div class="pweet_author-name">
+                                Netflix France
+                            </div>
+                            <div class="pweet_author-at">
+                                @NetflixFR
+                            </div>
+                            <div class="pweet_publish-time">
+                                10j
+                            </div>
+                        </div>
+                        <div class="pweet_content">
+                            Chacun sa fève.<br>
+                            <img alt="Image Pweet" class="pweet_image" src="../assets/Network/calendrier_netflix.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pweet">
+                    <img alt="Photo de profil" class="pweet_author-logo" src="../assets/ProfilePicture/spotify.png">
+                    <div class="pweet_main">
+                        <div class="pweet_header">
+                            <div class="pweet_author-name">
+                                Spotify France
+                            </div>
+                            <div class="pweet_author-at">
+                                @SpotifyFR
+                            </div>
+                            <div class="pweet_publish-time">
+                                1m
+                            </div>
+                        </div>
+                        <div class="pweet_content">
+                            Votre rétrospective 2021 est disponible.<br>
+                            <img alt="Image de Pweet" class="pweet_image" src="../assets/Network/retrospective.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="layout_main_notifications" id="notifications">
@@ -223,9 +311,9 @@
 
             <div class="notification">
                 <div class="notification_logos">
-                    <img class="notification_logo" src="../assets/ProfilePicture/woman1.png">
-                    <img class="notification_logo" src="../assets/ProfilePicture/man1.png">
-                    <img class="notification_logo" src="../assets/ProfilePicture/man2.png">
+                    <img alt="Photo de profil" class="notification_logo" src="../assets/ProfilePicture/woman1.png">
+                    <img alt="Photo de profil" class="notification_logo" src="../assets/ProfilePicture/man1.png">
+                    <img alt="Photo de profil" class="notification_logo" src="../assets/ProfilePicture/man2.png">
                 </div>
                 <div class="notification_info">
                     Il y a eu beaucoup de Pweets en votre absence
@@ -236,7 +324,7 @@
             </div>
 
             <div class="notification">
-                <img class="notification_logo" src="../assets/ProfilePicture/woman1.png">
+                <img alt="Photo de profil" class="notification_logo" src="../assets/ProfilePicture/woman1.png">
                 <div class="notification_info">
                     Pweet récent de Camille Dubois
                 </div>
@@ -246,7 +334,7 @@
             </div>
 
             <div class="notification">
-                <img class="notification_logo" src="../assets/ProfilePicture/man2.png">
+                <img alt="Photo de profil" class="notification_logo" src="../assets/ProfilePicture/man2.png">
                 <div class="notification_info">
                     Pweet récent de Mark Blake
                 </div>
@@ -256,7 +344,7 @@
             </div>
 
             <div class="notification">
-                <img class="notification_logo" src="../assets/ProfilePicture/woman1.png">
+                <img alt="Photo de profil" class="notification_logo" src="../assets/ProfilePicture/woman1.png">
                 <div class="notification_info">
                     Pweet récent de Camille Dubois
                 </div>
@@ -270,29 +358,114 @@
 
             <div class="top_nav_chat">
                 <div class="conversation_person_picture">
-                    <img class="conversation_person_picture" src="../assets/ProfilePicture/unknown.png">
+                    <img alt="Photo de profil" class="conversation_person_picture" src="../assets/ProfilePicture/unknown.png">
                 </div>
                 <div class="conversation_person">Unknown</div>
                 <div class="conversation_call">
-                    <img class="phone_call" src="../assets/svg/phone.svg">
-                    <img class="video_call" src="../assets/svg/video-camera.svg">
+                    <img alt="Icon telephone" class="phone_call" src="../assets/svg/phone.svg">
+                    <img alt="Icon camera" class="video_call" src="../assets/svg/video-camera.svg">
                 </div>
             </div>
 
             <div class="messages_area" id="messages_area">
-                <div class="unknown_message">Salut</div>
-                <div class="unknown_message">Tu te demandes peut-être qui je suis ?</div>
+                <div class="unknown_message">
+                    <div class="unknown_message_content">Salut</div>
+                    <div class="unknown_message_date_info">31/12/2021  18:26</div>
+                </div>
+                <div class="unknown_message">
+                    <div class="unknown_message_content">Tu te demandes peut-être qui je suis ?</div>
+                    <div class="unknown_message_date_info">31/12/2021  18:30</div>
+                </div>
+
+                <div class="my_message">
+                    <div class="my_message_content">...</div>
+                    <div class="my_message_date_info">31/12/2021  18:28</div>
+                </div>
             </div>
 
             <div class="bottom_nav_chat">
-                <input class="input_message_conversation" id="input_message_conversation" type="text" placeholder="Tapez votre message...">
-                <img class="bottom_nav_chat_send" src="../assets/svg/send.svg" onclick="chatWith()">
+                <input class="input_message_conversation" id="input_message_conversation"
+                       type="text" placeholder="Tapez votre message..." ondragenter="chatWith()">
+                <img alt="Icon envoyer" class="bottom_nav_chat_send" src="../assets/svg/send.svg" onclick="chatWith()">
             </div>
 
         </div>
 
         <div class="layout_main_profile" id="profile">
-            Profile
+
+            <div class="profile_heading">Vos abonnements</div>
+
+            <div class="abonnement">
+                <img alt="Photo de profil" class="abonnement_logo" src="../assets/ProfilePicture/woman1.png">
+                <div class="abonnement_content">
+                    <div class="abonnement_name">
+                        Camille Dubois
+                    </div>
+                    <div class="abonnement_tag">
+                        @camilledubois
+                    </div>
+                </div>
+            </div>
+
+            <div class="abonnement">
+                <img alt="Photo de profil" class="abonnement_logo" src="../assets/ProfilePicture/man1.png">
+                <div class="abonnement_content">
+                    <div class="abonnement_name">
+                        John Doe
+                    </div>
+                    <div class="abonnement_tag">
+                        @johndoe
+                    </div>
+                </div>
+            </div>
+
+            <div class="abonnement">
+                <img alt="Photo de profil" class="abonnement_logo" src="../assets/ProfilePicture/man2.png">
+                <div class="abonnement_content">
+                    <div class="abonnement_name">
+                        Mark Blake
+                    </div>
+                    <div class="abonnement_tag">
+                        @markblake
+                    </div>
+                </div>
+            </div>
+
+            <div class="abonnement" id="abonnement_netflix">
+                <img alt="Photo de profil" class="abonnement_logo" src="../assets/ProfilePicture/netflix.jpg">
+                <div class="abonnement_content">
+                    <div class="abonnement_name">
+                        Netflix France
+                    </div>
+                    <div class="abonnement_tag">
+                        @NetflixFR
+                    </div>
+                </div>
+            </div>
+
+            <div class="abonnement" id="abonnement_disney">
+                <img alt="Photo de profil" class="abonnement_logo" src="../assets/ProfilePicture/disney.jpg">
+                <div class="abonnement_content">
+                    <div class="abonnement_name">
+                        Disney +
+                    </div>
+                    <div class="abonnement_tag">
+                        @Disney+
+                    </div>
+                </div>
+            </div>
+
+            <div class="abonnement" id="abonnement_spotify">
+                <img alt="Photo de profil" class="abonnement_logo" src="../assets/ProfilePicture/spotify.png">
+                <div class="abonnement_content">
+                    <div class="abonnement_name">
+                        Spotify France
+                    </div>
+                    <div class="abonnement_tag">
+                        @SpotifyFR
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="layout_right-sidebar-container">
@@ -359,7 +532,7 @@
                         </div>
                     </div>
                     <div class="follow_block">
-                        <img class="follow_author-logo" src="../assets/ProfilePicture/netflix.jpg">
+                        <img alt="Photo de profil" class="follow_author-logo" src="../assets/ProfilePicture/netflix.jpg">
                         <div class="follow_content">
                             <div>
                                 <div class="follow_author-name">
@@ -371,13 +544,13 @@
                             </div>
                             <div class="follow_button" onclick="follow()">
                                 <div class="follow_button_off" id="follow_state_off">+ Suivre</div>
-                                <img class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on">
+                                <img alt="Icon abonnement" class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on">
                             </div>
                         </div>
                     </div>
 
                     <div class="follow_block">
-                        <img class="follow_author-logo" src="../assets/ProfilePicture/disney.jpg">
+                        <img alt="Photo de profil" class="follow_author-logo" src="../assets/ProfilePicture/disney.jpg">
                         <div class="follow_content">
                             <div>
                                 <div class="follow_author-name">
@@ -389,13 +562,13 @@
                             </div>
                             <div class="follow_button" onclick="follow2()">
                                 <div class="follow_button_off" id="follow_state_off2">+ Suivre</div>
-                                <img class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on2">
+                                <img alt="Icon abonnement" class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on2">
                             </div>
                         </div>
                     </div>
 
                     <div class="follow_block">
-                        <img class="follow_author-logo" src="../assets/ProfilePicture/spotify.png">
+                        <img alt="Photo de profil" class="follow_author-logo" src="../assets/ProfilePicture/spotify.png">
                         <div class="follow_content">
                             <div>
                                 <div class="follow_author-name">
@@ -407,7 +580,7 @@
                             </div>
                             <div class="follow_button" onclick="follow3()">
                                 <div class="follow_button_off" id="follow_state_off3">+ Suivre</div>
-                                <img class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on3">
+                                <img alt="Icon abonnement" class="follow_button_on" src="../assets/Home/check.png" id="follow_state_on3">
                             </div>
                         </div>
                     </div>
@@ -416,7 +589,8 @@
         </div>
     </div>
 
-<script src="../js/SocialNetwork.js"></script>
+    <script src="../js/Home.js"></script>
+    <script src="../js/SocialNetwork.js"></script>
 
 </body>
 </html>

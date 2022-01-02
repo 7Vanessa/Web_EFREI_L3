@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/pigeon.ico">
@@ -8,28 +8,27 @@
 </head>
 <body>
 
-
         <video autoplay="autoplay" loop="loop" muted class="my_video">
             <source src="../assets/video/background.mp4" type="video/mp4">
         </video>
 
         <div class="form_sign-up">
             <h1>Rejoignez nous</h1>
-            <form action="SocialNetwork.html" method="get" name="sign_up_form">
-                <input type="text" class="input-area" name="pseudo" placeholder="Saisissez votre pseudo">
+            <form name="sign_up_form">
+                <input type="text" class="input-area" id="pseudo" placeholder="Saisissez votre pseudo">
                 <input type="email" class="input-area" placeholder="Saisissez votre adresse mail">
                 <input type="password" class="input-area" placeholder="Saisissez votre mot de passe">
-                <input type="submit" class="sign-up_button" value="S'inscrire" onclick="onSignUp()"/>
+                <button type="button" class="sign-up_button" onclick="onSignUp()">S'inscrire</button>
             </form>
         </div>
 
         <footer>
             <p><a href="Contact.html">Contact/A propos de nous</a></p>
-            <p>© 2021 Pwitter. All rights reserved</p>
+            <p><a href="Phishing.html">© 2021 Pwitter. All rights reserved</a></p>
         </footer>
 
 
     <script src="../js/Home.js"></script>
-    <script src="../js/SocialNetwork.js"></script>
+
 </body>
 </html>

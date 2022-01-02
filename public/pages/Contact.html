@@ -1,88 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../content/logo.png">
     <title>Pwitter</title>
     <link rel="stylesheet" href="../css/Contact.css" />
 </head>
 
-<body onload="addForm()">
+<body onload="completeTable()">
+
     <header>
-        <h1 style="font-family: Verdana, sans-serif; text-align: center">Pwitter</h1>
+        <h1>Pwitter</h1>
         <div>
             <button onclick="showPhishing()">Phishing</button>
             <button onclick="showCatfishing()">Catfishing</button>
         </div>
     </header>
-    <!--
-    <div class="stats">
-        <table>
 
-            <colgroup>
-                <col class="colonne1">
-            </colgroup>
-
-            <tr>
-                <th>Personnage</th>
-                <th>Oui</th>
-                <th>Non</th>
-            </tr>
-
-            <tr>
-                <td>Choix 1</td>
-                <td>45%</td>
-                <td>55%</td>
-            </tr>
-
-            <tr>
-                <td>Choix 2</td>
-                <td>20%</td>
-                <td>80%</td>
-            </tr>
-
-            <tr>
-                <td>Choix 3</td>
-                <td>30%</td>
-                <td>70%</td>
-            </tr>
-
-            <tr>
-                <td>Choix 4</td>
-                <td>40%</td>
-                <td>60%</td>
-            </tr>
-
-        </table>
-
-
-
-        <table class="table" id="tableStats">
-            <thead>
-            <tr>
-                <th>Pseudo</th>
-                <th>Age</th>
-            </tr>
-            </thead>
-            <tr></tr>
-        </table>
-
-    </div>
-    -->
-
-    <div class="phishing">
-        <h2 style="font-family: Verdana, sans-serif; color: white">Données recueillies par phishing : </h2>
-        <table class="data_retrieved">
-            <tr>
+    <div class="phishing" id="phishing">
+        <table class="data_retrieved" id="data_retrieved">
+            <caption>Données recueillies par phishing</caption>
+            <tr class="header_table">
                 <th>Nom</th>
                 <th>Prénom</th>
-                <th>Âge</th>
+                <th>Age</th>
                 <th>Adresse</th>
-                <th>Code postal</th>
                 <th>Téléphone</th>
-                <th>RIB</th>
-                <th>Cryptogramme visuel</th>
+                <th>Numero de carte</th>
+                <th>MM/AA</th>
+                <th>CVV</th>
+            </tr>
+            <tr>
+                <th>Mr. Guantanamo</th>
+                <th></th>
+                <th>32</th>
+                <th>31 rue de la République</th>
+                <th>0675489514</th>
+                <th>4875 6698 7541 2584</th>
+                <th>04/27</th>
+                <th>680</th>
             </tr>
         </table>
         <br>
@@ -99,8 +56,8 @@
         </p>
     </div>
 
-    <div class="catfishing">
-        <h2 style="font-family: Verdana, sans-serif; color: white">Victime de catfishing : </h2>
+    <div class="catfishing" id="catfishing">
+        <h2>Victime de catfishing : </h2>
         <p class="morals">
             <strong>Attention à qui vous parlez !</strong> <br>
             Un prince nigérian vous contacte parce qu'il a besoin d'aide et vous propose d'être millionaire ? Fuyez. <br>
@@ -117,47 +74,22 @@
         </p>
     </div>
 
-    <!--
-    <script src="../js/Accueil.js"></script>
-    <script id="stats" type="text/x-jquery-tmpl">
-            <tr>
-                <th>${Pseudo}</th>
-                <th>${Age}</th>
-            </tr>
-    </script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js" type="text/javascript"></script>
-    -->
-
-    <!--
-    <script>
-        $(function () {
-            $('#click').click(function (e) {
-                var model = new Object();
-
-                // $('#id').val()
-                model.Pseudo = "";
-                model.Age = ""
-
-                $("#stats").tmpl(model).appendTo("#tableStats");
-            });
-        });
-    </script>
-    -->
-
-    <div class="realisateurs_container">
-        <div class="realisateur">
+    <div class="realisateurs_container" id="realisateurs_container">
+        <div class="realisateur" id="vanessa" onmouseover="renderPictureV()" onmouseout="removePictureV()">
             <div class="realisateur_name">Vanessa MOHAMMEDI</div>
             <div class="realisateur_info">Etudiante en 3ème année à Efrei Paris</div>
         </div>
-        <div class="realisateur">
+        <div class="realisateur" id="kevin" onmouseover="renderPictureK()" onmouseout="removePictureK()">
             <div class="realisateur_name">Kévin HUY</div>
             <div class="realisateur_info">Etudiant en 3ème année à Efrei Paris</div>
         </div>
     </div>
 
-    <script src="../js/Contact.js">
-    </script>
+    <footer>
+        <p><a href="Home.html">© 2021 Pwitter. All rights reserved</a></p>
+    </footer>
+
+    <script src="../js/Contact.js"></script>
 
 </body>
 

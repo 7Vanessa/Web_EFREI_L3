@@ -1,53 +1,81 @@
-function addForm() {
-    const newItem = document.createElement('tr')
-    const nomTd = document.createElement('td')
-    const prenomTd = document.createElement('td')
-    const ageTd = document.createElement('td')
-    const adresseTd = document.createElement('td')
-    const codePostalTd = document.createElement('td')
-    const telephoneTd = document.createElement('td')
-    const ribTd = document.createElement('td')
-    const cryptogrammeTd = document.createElement('td')
+const completeTable = () => {
+    document.getElementById('phishing').style.display = "block"
+    document.getElementById('catfishing').style.display = "none"
 
-    const parameters = location.search.substring(1).split("&");
-    let value = parameters[0].split("=")
-    nomTd.textContent = unescape(value[1])
-    value = parameters[1].split("=")
-    prenomTd.textContent = unescape(value[1])
-    value = parameters[2].split("=")
-    ageTd.textContent = unescape(value[1])
-    value = parameters[3].split("=")
-    adresseTd.textContent = unescape(value[1])
-    value = parameters[4].split("=")
-    codePostalTd.textContent = unescape(value[1])
-    value = parameters[5].split("=")
-    telephoneTd.textContent = unescape(value[1])
-    value = parameters[6].split("=")
-    ribTd.textContent = unescape(value[1])
-    value = parameters[7].split("=")
-    cryptogrammeTd.textContent = unescape(value[1])
+    var ligne = document.createElement('tr')
+    ligne.className = 'ligne'
 
-    newItem.append(nomTd, prenomTd, ageTd, adresseTd, codePostalTd, telephoneTd, ribTd, cryptogrammeTd)
+    var ligne_nom = document.createElement('th')
+    ligne_nom.innerHTML = localStorage.getItem('nom')
 
-    const table = document.querySelector('.data_retrieved')
-    table.appendChild(newItem)
+    var ligne_prenom = document.createElement('th')
+    ligne_prenom.innerHTML = localStorage.getItem('prenom')
+
+    var ligne_age = document.createElement('th')
+    ligne_age.innerHTML = localStorage.getItem('age')
+
+    var ligne_adresse = document.createElement('th')
+    ligne_adresse.innerHTML = localStorage.getItem('adresse')
+
+    var ligne_tel = document.createElement('th')
+    ligne_tel.innerHTML = localStorage.getItem('tel')
+
+    var ligne_num_carte = document.createElement('th')
+    ligne_num_carte.innerHTML = localStorage.getItem('carte_num')
+
+    var ligne_mm_aa = document.createElement('th')
+    ligne_mm_aa.innerHTML = localStorage.getItem('mm_aa')
+
+    var ligne_cvv = document.createElement('th')
+    ligne_cvv.innerHTML = localStorage.getItem('cvv')
+
+    ligne.append(ligne_nom, ligne_prenom, ligne_age, ligne_adresse, ligne_tel, ligne_num_carte, ligne_mm_aa, ligne_cvv)
+
+    document.getElementById("data_retrieved").appendChild(ligne)
+}
+
+const renderPictureV = () => {
+    document.getElementById("realisateurs_container").style.backgroundImage = "url('../assets/Contact/vanessa.jpg')"
+    document.getElementById("realisateurs_container").style.boxShadow = '0 0 8px 8px white inset'
+    document.getElementById("realisateurs_container").style.backgroundColor = 'rgb(222, 219, 212)'
+    document.getElementById("realisateurs_container").style.backgroundSize = 'contain'
+    document.getElementById("realisateurs_container").style.backgroundRepeat = 'no-repeat'
+    document.getElementById("realisateurs_container").style.backgroundPosition = 'center'
+    document.getElementById("vanessa").style.opacity = 0.65
+    document.getElementById("kevin").style.opacity = 0.65
+}
+
+const removePictureV = () => {
+    document.getElementById("realisateurs_container").style.backgroundImage = ""
+    document.getElementById("realisateurs_container").style.backgroundColor = 'white'
+    document.getElementById("vanessa").style.opacity = 1
+    document.getElementById("kevin").style.opacity = 1
+}
+
+const renderPictureK = () => {
+    document.getElementById("realisateurs_container").style.backgroundImage = "url('../assets/Contact/kevin.png')"
+    document.getElementById("realisateurs_container").style.boxShadow = '0 0 8px 8px white inset'
+    document.getElementById("realisateurs_container").style.backgroundColor = 'white'
+    document.getElementById("realisateurs_container").style.backgroundSize = 'contain'
+    document.getElementById("realisateurs_container").style.backgroundRepeat = 'no-repeat'
+    document.getElementById("realisateurs_container").style.backgroundPosition = 'center'
+    document.getElementById("vanessa").style.opacity = 0.65
+    document.getElementById("kevin").style.opacity = 0.65
+}
+
+const removePictureK = () => {
+    document.getElementById("realisateurs_container").style.backgroundImage = ""
+    document.getElementById("realisateurs_container").style.backgroundColor = 'white'
+    document.getElementById("vanessa").style.opacity = 1
+    document.getElementById("kevin").style.opacity = 1
 }
 
 function showPhishing() {
-    const phishing = document.querySelector('.phishing')
-    const catfishing = document.querySelector('.catfishing')
-    phishing.style.display = "block"
-    phishing.style.flexDirection = "column"
-    phishing.style.justifyContent = "center"
-    catfishing.style.display = "none"
+    document.getElementById('phishing').style.display = "block"
+    document.getElementById('catfishing').style.display = "none"
 }
 
 function showCatfishing() {
-    const phishing = document.querySelector('.phishing')
-    const catfishing = document.querySelector('.catfishing')
-    phishing.style.display = "none"
-    catfishing.style.display = "block"
-    catfishing.style.display = "block"
-    catfishing.style.flexDirection = "column"
-    catfishing.style.justifyContent = "center"
+    document.getElementById('phishing').style.display = "none"
+    document.getElementById('catfishing').style.display = "block"
 }

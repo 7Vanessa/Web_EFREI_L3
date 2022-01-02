@@ -1,106 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/Phishing/iphone-12-pro-max.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/Phishing/confettis.png">
     <title>Iphone 12 pro max à 5 euros seulement ! </title>
     <link href="../css/Phishing.css" rel="stylesheet"/>
 </head>
 
 <body>
-<header>
-    <h1 class="main-title"><b>VOUS AVEZ GAGNÉ UN IPHONE 12 PRO MAX !!!</b></h1>
-</header>
+    <header>
+        <h1 class="main-title"><b>VOUS AVEZ GAGNÉ UN IPHONE 12 PRO MAX !!!</b></h1>
+    </header>
 
-<div class="sub-title">
-    <h1 class="title1">Vous avez été sélectionnés au hasard parmi 200 000 candidat pour remporter un Iphone 12 Pro Max !</h1>
-    <h2 class="title2">Pour recevoir votre lot, veuillez rentrer vos cordonnés : </h2>
-</div>
+    <div class="sub-title">
+        <h1 class="title1">Vous avez été sélectionnés au hasard parmi 200 000 candidats pour remporter un Iphone 12 Pro Max !</h1>
+        <h2 class="title2">Pour recevoir votre lot, veuillez saisir vos coordonnées : </h2>
+    </div>
 
-<div style="display: flex;align-items: center">
-    <div class="div-form">
-        <form id="form_coordinates" action="Contact.html" method="get" name="coordinates" class="form">
-            <strong class="input-title">NOM</strong>
-            <br>
-            <label>
-                <input type="text" name="name" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">PRÉNOM</strong>
-            <br>
-            <label>
-                <input type="text" name="surname" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">ÂGE</strong>
-            <br>
-            <label>
-                <input type="number" name="age" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">ADRESSE</strong>
-            <br>
-            <label>
-                <input type="text" name="address" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">CODE POSTAL</strong>
-            <br>
-            <label>
-                <input type="text" name="zip_code" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">TÉLÉPHONE</strong>
-            <br>
-            <label>
-                <input type="tel" name="phone_number" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">RIB</strong>
-            <br>
-            <label>
-                <input type="text" name="RIB" size="40" class="input">
-            </label>
-            <br>
-            <br>
-            <strong class="input-title">CRYPTOGRAMME VISUEL</strong>
-            <br>
-            <label>
-                <input type="password" name="cryptogram" size="40" class="input">
-            </label>
-            <br>
-            <input type="submit" class="button" value="RECEVOIR VOTRE LOT" onclick="onClickContact()">
+    <div class="form_iphone">
+        <h1>Paiement</h1>
+        <form>
+            <label class="input_name">Nom</label>
+            <input id="nom" type="text" class="input-area" placeholder="Saisissez votre nom">
+
+            <label class="input_name">Prénom</label>
+            <input id="prenom" type="text" class="input-area" placeholder="Saisissez votre prénom">
+
+            <label class="input_name">Age</label>
+            <input id="age" type="number" class="input-area" placeholder="Saisissez votre âge">
+
+            <label class="input_name">Adresse</label>
+            <input id="adresse" type="text" class="input-area" placeholder="Saisissez votre adresse">
+
+            <label class="input_name">Téléphone</label>
+            <input id="tel" type="text" class="input-area" placeholder="Saisissez votre numéro de téléphone">
+
+            <label class="input_name">Numéro de carte</label>
+            <input id="carte_num" type="text" class="input-area" placeholder="Saisissez votre numéro de carte">
+
+            <div class="input_small">
+                <div class="container_input_small">
+                    <label class="input_name">MM/AA</label>
+                    <input id="mm_aa" type="text" class="input-area_small" placeholder="MM/AA">
+                </div>
+                <div class="container_input_small">
+                    <label class="input_name">CVV</label>
+                    <input id="cvv" type="text" class="input-area_small" placeholder="CVV">
+                </div>
+            </div>
+
+            <button type="button" class="sign-up_button" onclick="payer()">Payer</button>
         </form>
     </div>
-    <div class="div-iphone">
-        <h1 style="font-family: Verdana, sans-serif">Iphone 12 PRO MAX</h1>
-        <img src="../assets/Phishing/iphone-12-pro-max.png" class="iphone" alt="photo d'un iphone 12 pro max recto verso">
-    </div>
-</div>
 
-<br>
 
-<div class="comment-section">
-    <h2 style="font-family: Arial, serif">Commentaires</h2>
-    <h3 style="font-family: 'Times New Roman', serif">Mr. Guantanamo</h3>
-    <div class="comment">
-        <img src="../assets/Phishing/personne.jpeg" class="img-profile" alt="photo de profil d'un usager ayant déposer un commentaire">
-        <h3 style="font-family: 'Arial', serif">Très satisfait du produit ! Merci de m'avoir sélectionné pour le concours. SHEESH</h3>
+    <div class="comment_area">
+        <div class="comment_area_heading">
+            Commentaires
+        </div>
+        <div class="new_comment">
+            <input class="input_title" id="input_title" placeholder="Tapez le titre de votre commentaire...">
+            <input class="input_text" id="input_text" placeholder="Tapez votre commentaire...">
+            <button class="comment_button" onclick="comment()">Valider</button>
+        </div>
+        <div class="comments" id="comments">
+
+            <div class="comment">
+                <div class="comment_header">
+                    <img alt="Photo de profil" class="comment_author_picture" src="../assets/Phishing/personne.jpeg">
+                    <div class="comment_author_name">Mr. Guantanamo</div>
+                </div>
+                <div class="comment_content">
+                    <div class="comment_title">
+                        Parfait !
+                    </div>
+                    <div class="comment_text">
+                        Très satisfait du produit ! Merci de m'avoir sélectionné pour le concours. SHEESH
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment_header">
+                    <img alt="Photo de profil" class="comment_author_picture" src="../assets/ProfilePicture/unknown.png">
+                    <div class="comment_author_name">Anonyme</div>
+                </div>
+                <div class="comment_content">
+                    <div class="comment_title">
+                        Arnaque !!!!!
+                    </div>
+                    <div class="comment_text">
+                        Non seulement je n'ai rien reçu mais en plus ma carte bancaire a été piraté.
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <br>
-    <input style="cursor: pointer" type="submit" form="form_coordinates" value="Entrer un commentaire" onclick="onClickContact()"/>
-</div>
+
+    <script src="../js/Phishing.js"></script>
 
 </body>
 
-<script src="../js/Phishing.js">
-</script>
 </html>
-
