@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/Phishing/confettis.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/Phishing/iphone-12-pro-max.png">
     <title>Iphone 12 pro max à 5 euros seulement ! </title>
     <link href="../css/Phishing.css" rel="stylesheet"/>
 </head>
@@ -14,31 +14,31 @@
 </header>
 
 <div class="sub-title">
-    <h1 class="title1">Vous avez été sélectionnés au hasard parmi 200 000 candidats pour remporter un Iphone 12 Pro Max !</h1>
+    <h1 class="title1">Vous avez été sélectionnés au hasard parmi 200 000 candidat pour remporter un Iphone 12 Pro Max !</h1>
     <h2 class="title2">Pour recevoir votre lot, veuillez rentrer vos cordonnés : </h2>
 </div>
 
 <div style="display: flex;align-items: center">
     <div class="div-form">
-        <form class="form">
+        <form id="form_coordinates" action="Contact.html" method="get" name="coordinates" class="form">
             <strong class="input-title">NOM</strong>
             <br>
             <label>
-                <input type="text" name="nom" size="40" class="input">
+                <input type="text" name="name" size="40" class="input">
             </label>
             <br>
             <br>
             <strong class="input-title">PRÉNOM</strong>
             <br>
             <label>
-                <input type="text" name="prenom" size="40" class="input">
+                <input type="text" name="surname" size="40" class="input">
             </label>
             <br>
             <br>
             <strong class="input-title">ÂGE</strong>
             <br>
             <label>
-                <input type="number" name="prenom" size="40" class="input">
+                <input type="number" name="age" size="40" class="input">
             </label>
             <br>
             <br>
@@ -52,14 +52,14 @@
             <strong class="input-title">CODE POSTAL</strong>
             <br>
             <label>
-                <input type="text" name="zip-code" size="40" class="input">
+                <input type="text" name="zip_code" size="40" class="input">
             </label>
             <br>
             <br>
             <strong class="input-title">TÉLÉPHONE</strong>
             <br>
             <label>
-                <input type="tel" name="phone-number" size="40" class="input">
+                <input type="tel" name="phone_number" size="40" class="input">
             </label>
             <br>
             <br>
@@ -73,11 +73,16 @@
             <strong class="input-title">CRYPTOGRAMME VISUEL</strong>
             <br>
             <label>
-                <input type="password" name="cryptogramme" size="40" class="input">
+                <input type="password" name="cryptogram" size="40" class="input">
             </label>
+            <br>
+            <input type="submit" class="button" value="RECEVOIR VOTRE LOT" onclick="onClickContact()">
         </form>
     </div>
-<button type="submit" class="button" onclick="onClickContact()">RECEVOIR VOTRE LOT</button>
+    <div class="div-iphone">
+        <h1 style="font-family: Verdana, sans-serif">Iphone 12 PRO MAX</h1>
+        <img src="../assets/Phishing/iphone-12-pro-max.png" class="iphone" alt="photo d'un iphone 12 pro max recto verso">
+    </div>
 </div>
 
 <br>
@@ -90,13 +95,12 @@
         <h3 style="font-family: 'Arial', serif">Très satisfait du produit ! Merci de m'avoir sélectionné pour le concours. SHEESH</h3>
     </div>
     <br>
-    <button style="cursor: pointer" type="submit" onclick="onClickContact()">Entrez un commentaire</button>
+    <input style="cursor: pointer" type="submit" form="form_coordinates" value="Entrer un commentaire" onclick="onClickContact()"/>
 </div>
 
 </body>
 
 <script src="../js/Phishing.js">
-
 </script>
 </html>
 

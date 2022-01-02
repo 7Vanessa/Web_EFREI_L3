@@ -1,5 +1,6 @@
 table, th, tr, td {
-    border: 1px solid black;
+    border: 1px solid white;
+    font-family: Verdana, sans-serif;
 }
 
 td {
@@ -27,9 +28,30 @@ header h1 {
     justify-content: center;
 }
 
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body {
+    background-image:  url("../assets/Phishing/bleu.jpg");
+    background-size: 100%;
+    opacity: 95%;
+}
+
+header button {
+    background-color: #81DAFF;
+    height: 30px;
+    width: 100px;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    border-radius: 3px;
+    margin: 5px;
+}
+
 .realisateurs_container {
     display: flex;
-    margin: 50px;
     width: 80%;
     height: 500px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
@@ -57,4 +79,26 @@ header h1 {
 
 .realisateur_info {
     font-size: 18px;
+}
+
+.data_retrieved {
+    color: white;
+    border-color: white;
+    border-collapse: collapse;
+    border-width: 2px;
+    width: 100%;
+}
+
+.phishing {
+    display: none;
+}
+
+.catfishing {
+    display: none;
+}
+
+.morals {
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
 }
