@@ -107,7 +107,7 @@ header button {
 
 .realisateurs_container {
     display: flex;
-    margin: 20px auto 50px auto;
+    margin: 20px auto 80px auto;
     width: 80%;
     height: 500px;
     background: #fff;
@@ -136,6 +136,10 @@ header button {
 
 .realisateur_info {
     font-size: 18px;
+}
+
+.realisateur_content {
+    margin-top: 10px;
 }
 
 footer {
